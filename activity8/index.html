@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Activity 8: Transitions</title>
+    <style>
+     .transition1{
+       background-color: red;
+       border: 1px solid black;
+       position: relative;
+       overflow:hidden;
+     }
+     .transition1::before{
+       content: 'Hi';
+       display: block;
+       width: 100%;
+       height: 100%;
+       position:absolute;
+       background-color: blue;
+       top: -100%;
+       transition: top 1s;
+     }
+     .transition1:hover::before{
+       top: 0;
+     }
+
+    .transition2:hover{
+     display: none;
+     
+     }
+     .transition3{
+       width: 200px;
+       height: 100px;
+       border:1px solid black;
+     }
+     .transition3:hover{
+      padding:  10px;
+      margin: 20px;
+      margin-left: 2.5%;
+      transform:scale(1.3);
+      transition-duration: 2s;
+     }
+     .transition4:hover{
+         transition-duration: 3s;
+     
+      color: rgb(3, 155, 3);
+      font-size: 2em;
+     
+      
+     }
+
+     .transition5{
+       width: 200px;
+       height: 200px;
+       border:1px solid rgb(15, 9, 9);
+       display: flex;
+       transition-duration: 0.8s;
+       flex-direction: column;
+       justify-content: center;
+       padding: 10px;
+     }
+
+     .transition5:hover{
+      -webkit-transform: rotate(360deg);
+      transition-duration: 0.8s;
+ 
+     }
+    </style>
+
+
+
+
+
+  </head>
+  <body>
+    <h1>Activity 5: Transitions</h1>
+    <div class="transition1">When mouse is over this div: hide with a element that says "Hi", that slides from above.</div>
+    <div class="transition2">When mouse is over this div: it dissapears</div>
+    <div class="transition3">When mouse is over this div: it grows</div>
+    <div class="transition4">When mouse is over this div: text-color changes</div>
+    <div class="transition5">When mouse is over this div: it rotates 360 deg</div>
+
+    <p>Take a look at <a href="https://www.w3schools.com/css/css3_animations.asp">Animations</a></p>
+  </body>
+</html>
